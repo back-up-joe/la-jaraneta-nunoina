@@ -1,0 +1,241 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    border: 0px;
+}
+
+/* Ajuste para el body cuando el navbar es fixed */
+body {
+    padding-top: 160px; /* Altura del navbar (60px de logo + 12px de padding) */
+}
+
+.navbar-custom {
+    background-color: #E73F40 !important;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Sombra suave */
+}
+        
+.navbar-custom .navbar-brand,
+.navbar-custom .nav-link {
+    color: white !important;
+}
+
+/* Centrado del título */
+.navbar-brand-center {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+/* Ocultar en móviles */
+@media (max-width: 991.98px) {
+    .navbar-brand-center {
+        display: none !important;
+    }
+}
+
+.navbar-custom .navbar-toggler-icon {
+    filter: brightness(0) invert(1); /* Convierte negro a blanco */
+}
+        
+.navbar-custom .navbar-toggler {
+    border-color: white !important;
+}
+      
+/* Ajuste para el logo */
+.navbar-brand-logo {
+    margin-right: auto; /* Empuja todo a la derecha */
+}
+
+/* Definición de fuentes con @font-face */
+@font-face {
+    font-family: 'Owners';
+    src: url('../assets/fonts/Owners_XBlack.otf') format('opentype');
+    font-weight: 900; /* XBlack */
+    font-style: normal;
+    font-display: swap; /* Evita texto invisible durante la carga */
+}
+
+@font-face {
+    font-family: 'Owners Narrow';
+    src: url('../assets/fonts/Owners_Narrow_XBlack.otf') format('opentype');
+    font-weight: 900;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Basic Sans';
+    src: url('../assets/fonts/Basic_Sans_Black.otf') format('opentype');
+    font-weight: 900;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Basic Sans';
+    src: url('../assets/fonts/Basic_Sans_Regular.otf') format('opentype');
+    font-weight: 400; /* Regular */
+    font-style: normal;
+    font-display: swap;
+}
+
+/* Jerarquía tipográfica */
+h1, h2, h3 {
+    font-family: 'Owners', sans-serif;
+    font-weight: 900;
+    text-transform: uppercase; /* Forzar mayúsculas */
+    letter-spacing: 0.03em; /* Mejor legibilidad */
+}
+
+h4, h5, h6 {
+    font-family: 'Basic Sans', sans-serif;
+    font-weight: 900;
+}
+
+.sostenidas {
+    font-family: 'Owners Narrow', sans-serif;
+    font-weight: 900;
+    font-variant: small-caps;
+    letter-spacing: 0.5px;
+}
+
+body, p {
+    font-family: 'Basic Sans', sans-serif;
+    font-weight: 400;
+    line-height: 1.6;
+}
+
+body {
+    background-color: #FAE2D3;
+    min-height: 100vh; /* Opcional: cubre toda la altura visible */
+}
+
+/* Footer con azul #2E446C */
+.custom-footer {
+    background-color: #2E446C !important;
+    color: white;
+    font-family: 'Basic Sans', sans-serif;
+    border-top: 3px solid rgba(255, 255, 255, 0.1); /* Borde más grueso para contraste */
+}
+
+.custom-footer p {
+    font-weight: 400;
+    font-size: 0.95rem; /* Un poco más grande para legibilidad */
+    letter-spacing: 0.05em;
+    opacity: 0.9; /* Suaviza el blanco para reducir brillo */
+}
+
+/* Versión móvil */
+@media (max-width: 768px) {
+    .custom-footer {
+        padding: 1.5rem 0 !important;
+    }
+}
+
+/* Estilos para el Hero Section */
+.hero-section {
+    background-image: url('../img/backgrounds/wall-paper.jpg'); /* Ruta de tu imagen */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 80vh; /* 80% del viewport height */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: white;
+    position: relative;
+    margin-top: -72px; /* Compensa el padding del body */
+    padding-top: 72px; /* Vuelve a agregar el espacio */
+}
+        
+.hero-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Overlay oscuro para mejor legibilidad */
+}
+        
+.hero-content {
+    position: relative;
+    z-index: 1;
+    max-width: 800px;
+    padding: 0 20px;
+}
+        
+.hero-title {
+    font-family: 'Owners', sans-serif;
+    font-weight: 900;
+    text-transform: uppercase;
+    font-size: 3.5rem;
+    letter-spacing: 0.1em;
+    margin-bottom: 1rem;
+}
+        
+.hero-subtitle {
+    font-family: 'Basic Sans', sans-serif;
+    font-weight: 400;
+    font-size: 1.5rem;
+    margin-bottom: 2rem;
+}
+        
+.btn-hero {
+    background-color: #E73F40;
+    border: none;
+    padding: 12px 30px;
+    font-family: 'Basic Sans', sans-serif;
+    font-weight: 900;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    transition: all 0.3s ease;
+}
+        
+.btn-hero:hover {
+    background-color: #c53232;
+    transform: translateY(-3px);
+}
+        
+@media (max-width: 768px) {
+    .hero-title {
+        font-size: 2.5rem;
+    }
+            
+    .hero-subtitle {
+        font-size: 1.2rem;
+    }
+}
+
+@media (max-width: 991.98px) {
+    body {
+        padding-top: 56px; /* Altura reducida en móviles */
+    }
+    
+    .hero-section {
+        margin-top: -56px;
+        padding-top: 56px;
+    }
+}
+
+/* Estilos para el modal de imágenes completas */
+#modalActividades .modal-content {
+    background: #000; /* Fondo negro para mejor contraste */
+    border: none;
+}
+    
+#modalActividades .modal-body {
+    padding: 0;
+}
+    
+#modalActividades img {
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+    max-height: 70vh; /* Limita la altura máxima */
+}
+    
+#modalActividades .modal-header {
+    padding: 1rem 1.5rem;
+}
