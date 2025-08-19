@@ -10,7 +10,7 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
     <!-- Bootstrap Icons -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
-    <link rel="stylesheet" href="css/styles.css?v=1.0.1">
+    <link rel="stylesheet" href="css/styles.css?v=1.0.2">
 </head>
 <body>
     <!-- Navbar -->
@@ -31,10 +31,10 @@
                         <a class="nav-link" href="#">Inicio</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#eventos">Eventos</a>
+                        <a class="nav-link" href="#eventos">Actividades</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="">Galería</a>
+                        <a class="nav-link" href="#programa">Programa</a>
                     </li>                    
                     <li class="nav-item">
                         <a class="nav-link" href="#" data-bs-toggle="modal" data-bs-target="#modalContacto">Contacto</a>
@@ -47,11 +47,11 @@
     <!-- Hero Section -->
     <section class="hero-section">
         <div class="hero-content">
-            <h1 class="hero-title"></h1>
+            <h1 id="eventos" class="hero-title"></h1>
             <br><br><br><br><br><br><br><br>
-            <p class="hero-subtitle">Estamos convencidos de que Jeannette Jara representa una alternativa comprometida con la justicia social, la participación ciudadana y el bienestar para todas y todos.</p>
+            <p class="hero-subtitle">Estamos convencidos de que Jeannette Jara representa una alternativa comprometida con la justicia social, la seguridad y la participación ciudadana y el bienestar para todas y todos.</p>
             <!-- Botón que activa el modal de actividades -->
-            <button id="eventos" class="btn btn-hero btn-lg text-white" data-bs-toggle="modal" data-bs-target="#modalActividades">
+            <button class="btn btn-hero btn-lg text-white" data-bs-toggle="modal" data-bs-target="#modalActividades">
                 Próximas actividades
             </button>
         </div>
@@ -68,11 +68,29 @@
                 <div class="modal-body p-0">
                     <div class="row g-0">
                     
-                        <!-- Actividad -->
-                        <div class="col">
-                            <img src="img/actividades/conversatorio-seguridad.jpg" class="img-fluid w-100" alt="Conversatorio Seguridad">
+                        <!-- Actividad 1 -->
+                        <div class="col-lg-6">
+                            <img src="img/actividades/01_conversatorio-seguridad.jpg" class="img-fluid w-100" alt="" style="height: 400px; padding: 10px;">
+                        </div>
+
+                        <!-- Actividad 2 -->
+                        <div class="col-lg-6">
+                            <img src="img/actividades/02_jugar-sin-miedo.jpg" class="img-fluid w-100" alt="" style="height: 400px; padding: 10px;">
                         </div>
                     </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Contenido principal con la card del PDF -->
+    <div id="programa" class="main-content">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="card pdf-card">
+                    <a href="media/pdf/Lineamientos-programaticos.pdf" target="_blank" rel="noopener noreferrer">
+                        <img src="img/afiches/pdf.png" class="card-img-top" alt="">
+                    </a>
                 </div>
             </div>
         </div>
@@ -84,10 +102,12 @@
             <p class="m-0 sostenidas">
                 © <span id="current-year"></span> La Jaraneta Ñuñoina
             </p>
+            <!--
             <div class="mt-3">
                 <a href="#" class="text-white mx-2 fs-5"><i class="bi bi-instagram"></i></a>
                 <a href="#" class="text-white mx-2 fs-5"><i class="bi bi-facebook"></i></a>
-            </div>
+            </div> -->
+            <br><br>
         </div>
         <br>
     </footer>
@@ -100,17 +120,22 @@
                     <h2 class="modal-title fs-3">¡Contáctanos!</h2>
                     <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
-                <div class="modal-body">
-                    <p>Para sumarte a los comandos en la comuna, escríbenos a:</p>
+                <div class="modal-body">                    
+                    <p>Súmate a los comandos en la comuna:</p>
                     <div class="d-flex align-items-center justify-content-center my-3">
                         <i class="bi bi-envelope-fill me-2 fs-4"></i>
                         <a href="mailto:contacto@jaranetanunoina.cl" class="fs-5 text-white">lajaranetanunoina@gmail.com</a>
+                    </div>                    
+                    <div class="d-flex align-items-center justify-content-center my-3">
+                        <i class="bi bi-card-checklist me-2 fs-4"></i>
+                        <a href="https://forms.gle/R7kUAUo7bRrvQeN97" target="_blank" rel="noopener noreferrer" class="fs-5 text-white">Completa el formulario</a>
                     </div>
+                    <!--
                     <p class="mt-3">También puedes seguirnos en nuestras redes sociales:</p>
                     <div class="d-flex justify-content-center gap-4 mt-3">
                         <a href="#" class="text-white fs-3"><i class="bi bi-instagram"></i></a>
                         <a href="#" class="text-white fs-3"><i class="bi bi-facebook"></i></a>
-                    </div>
+                    </div> -->
                 </div>
                 <div class="modal-footer border-0">
                     <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
@@ -121,6 +146,6 @@
 
     <!-- Bootstrap JS -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="js/script.js?v=1.0.1"></script>
+    <script src="js/script.js?v=1.0.2"></script>
 </body>
 </html>

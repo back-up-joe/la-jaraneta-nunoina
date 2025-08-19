@@ -107,6 +107,7 @@ body, p {
 
 body {
     background-color: #FAE2D3;
+    /* background-color: white; */
     min-height: 100vh; /* Opcional: cubre toda la altura visible */
 }
 
@@ -240,6 +241,44 @@ body {
     padding: 1rem 1.5rem;
 }
 
+/*
 #modalContacto {
     background: linear-gradient(to bottom,#E73F40, #FAE2D3);
+}*/
+
+/* PDF */
+
+.main-content {
+    min-height: calc(100vh - 200px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 80px 20px 60px;
+}
+.pdf-card {
+    max-width: 400px;
+    transition: transform 0.3s ease;
+    border: none;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+    padding: 0; /* Elimina el padding de la card */
+    overflow: hidden; /* Asegura que la imagen no sobresalga */
+    background-color: transparent; /* Fondo transparente para la card */
+}
+.pdf-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 35px rgba(0,0,0,0.2);
+}
+.pdf-card img {
+    width: 100%;
+    max-width: 400px; /* Tamaño máximo reducido */
+    height: auto;
+    cursor: pointer;
+    display: block; /* Elimina espacio inferior de imágenes inline */
+    margin: 0 auto; /* Centra la imagen horizontalmente */
+}
+/* Elimina cualquier padding del contenedor del enlace */
+.pdf-card a {
+    display: block;
+    padding: 0;
+    margin: 0;
 }
