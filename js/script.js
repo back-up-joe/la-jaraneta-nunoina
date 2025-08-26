@@ -15,3 +15,19 @@ document.getElementById('modalActividades').addEventListener('shown.bs.modal', f
         }, 50);
     });
 });
+
+// Mostrar automáticamente el modal de actividades al cargar la página
+document.addEventListener('DOMContentLoaded', function() {
+    // Verificar si el modal existe
+    var actividadesModalElement = document.getElementById('modalActividades');
+    
+    if (actividadesModalElement) {
+        // Crear una instancia del modal de actividades
+        var actividadesModal = new bootstrap.Modal(actividadesModalElement);
+        
+        // Mostrar el modal después de un breve retraso para mejor experiencia de usuario
+        setTimeout(function() {
+            actividadesModal.show();
+        }, 1000); // 1 segundo de retraso
+    }
+});
