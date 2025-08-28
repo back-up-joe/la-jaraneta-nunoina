@@ -31,3 +31,77 @@ document.addEventListener('DOMContentLoaded', function() {
         }, 1000); // 1 segundo de retraso
     }
 });
+
+// Carrusel personalizado
+let currentIndex = 0;
+const track = document.getElementById('carouselTrack');
+const slides = document.querySelectorAll('.carousel-slide');
+const indicatorsContainer = document.getElementById('carouselIndicators');
+        
+// Calcular el número de slides visibles según el ancho de la pantalla
+function getVisibleSlides() {
+    if (window.innerWidth < 768) return 1;
+    if (window.innerWidth < 992) return 2;
+    return 3;
+}
+        
+// Crear indicadores
+function createIndicators() {
+    indicatorsContainer.innerHTML = '';
+    const totalSlides = slides.length;
+    const visibleSlides = getVisibleSlides();
+    const indicatorCount = Math.ceil(totalSlides / visibleSlides);
+            
+    for (let i = 0; i < indicatorCount; i++) {
+        const indicator = document.createElement('div');
+        indicator.classList.add('carousel-indicator');
+        if (i === 0) indicator.classList.add('active');
+        indicator.addEventListener('click', () => {
+            currentIndex = i * visibleSlides;
+            updateCarousel();
+        });
+        indicatorsContainer.appendChild(indicator);
+    }
+}
+        
+// Actualizar carrusel
+function updateCarousel() {
+    const slideWidth = slides[0].offsetWidth;
+    const visibleSlides = getVisibleSlides();
+    track.style.transform = `translateX(-${currentIndex * slideWidth}px)`;
+            
+    // Actualizar indicadores
+    const indicators = document.querySelectorAll('.carousel-indicator');
+    const activeIndicator = Math.floor(currentIndex / visibleSlides);
+    indicators.forEach((indicator, index) => {
+        indicator.classList.toggle('active', index === activeIndicator);
+    });
+}
+        
+// Mover slides
+function moveSlide(direction) {
+    const visibleSlides = getVisibleSlides();
+    const maxIndex = slides.length - visibleSlides;
+            
+    currentIndex += direction;
+            
+    // Asegurarse de que el índice esté dentro de los límites
+    if (currentIndex < 0) {
+        currentIndex = 0;
+    } else if (currentIndex > maxIndex) {
+        currentIndex = maxIndex;
+    }
+            
+    updateCarousel();
+}
+        
+// Inicializar carrusel
+window.addEventListener('load', () => {
+    createIndicators();
+    updateCarousel();
+});
+        
+window.addEventListener('resize', () => {
+    createIndicators();
+    updateCarousel();
+});

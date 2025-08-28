@@ -256,7 +256,7 @@ body {
     padding: 80px 20px 60px;
 }
 .pdf-card {
-    max-width: 400px;
+    max-width: 350px;
     transition: transform 0.3s ease;
     border: none;
     box-shadow: 0 10px 30px rgba(0,0,0,0.15);
@@ -270,7 +270,7 @@ body {
 }
 .pdf-card img {
     width: 100%;
-    max-width: 400px; /* Tamaño máximo reducido */
+    max-width: 350px; /* Tamaño máximo reducido */
     height: auto;
     cursor: pointer;
     display: block; /* Elimina espacio inferior de imágenes inline */
@@ -281,4 +281,158 @@ body {
     display: block;
     padding: 0;
     margin: 0;
+}
+
+/* Sección de la copla */
+#copla {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    padding: 20px;
+}
+        
+.container-copla {
+    max-width: 450px;
+    text-align: center;
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+        
+#h4-copla {
+    margin-bottom: 25px;
+    font-size: 1.8em;
+}
+        
+#p-copla {
+    font-style: italic;
+    margin-bottom: 25px;
+    line-height: 1.8;
+    font-size: 1em;
+}
+
+.official-link {
+    font-family: 'Basic Sans', sans-serif;
+    font-weight: 900;
+    font-size: 1rem;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    color: #E73F40;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.official-link:hover {
+    color: #c53232;
+    text-decoration: underline;
+}
+
+/* Carrusel de infografías - Múltiples imágenes */
+.infographic-carousel {
+    padding: 3rem 0;
+    /* background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%); */
+    background: #F9F8ED;
+}
+        
+.carousel-title {
+    text-align: center;
+    margin-bottom: 2.5rem;
+    color: #2c3e50;
+    font-weight: 700;
+}
+        
+.carousel-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    position: relative;
+    overflow: hidden;
+}
+        
+.carousel-track {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+}
+        
+.carousel-slide {
+    flex: 0 0 calc(100% / 3);
+    padding: 0 15px;
+    box-sizing: border-box;
+}
+        
+.carousel-img {
+    border-radius: 12px;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
+    /*height: 300px;*/
+    width: 100%;
+    object-fit: cover;
+}
+        
+.carousel-control {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 1.5rem;
+    cursor: pointer;
+    z-index: 10;
+    transition: background-color 0.3s;
+}
+        
+.carousel-control:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+}
+        
+.carousel-control.prev {
+    left: 15px;
+}
+        
+.carousel-control.next {
+    right: 15px;
+}
+        
+.carousel-indicators {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+        
+.carousel-indicator {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background-color: rgba(0, 0, 0, 0.3);
+    margin: 0 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+        
+.carousel-indicator.active {
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+/* Responsive */
+@media (max-width: 992px) {
+    .carousel-slide {
+        flex: 0 0 50%;
+    }
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .hero-title {
+        font-size: 2.5rem;
+    }
+            
+    .carousel-slide {
+        flex: 0 0 100%;
+    }
 }
