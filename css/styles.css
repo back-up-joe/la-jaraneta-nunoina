@@ -319,7 +319,8 @@ body {
     font-size: 1rem;
     text-transform: uppercase;
     letter-spacing: 0.05em;
-    color: #E73F40;
+    /* color: #E73F40; */
+    color: white;
     text-decoration: none;
     transition: color 0.3s ease;
 }
