@@ -26,7 +26,7 @@
                 <img src="img/logos/J Jara v2-blanco.png" alt="Logo" height="60" class="d-inline-block align-top">
             </a>
             <!-- Título centrado (oculto en móviles) -->
-            <a class="navbar-brand-center navbar-brand fw-bold d-none d-lg-block" href="#"><h2>La Jaraneta Ñuñoina</h2></a>
+            <a class="navbar-brand-center navbar-brand fw-bold d-none d-xl-block" href="#"><h2>La Jaraneta Ñuñoina</h2></a>
             <!-- Menú colapsable -->
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
                 <span class="navbar-toggler-icon"></span>
@@ -42,9 +42,10 @@
                     <li class="nav-item">
                         <a class="nav-link" href="#programa">Programa</a>
                     </li>
+                    <!--
                     <li class="nav-item">
                         <a class="nav-link" href="#infografias">Infografía</a>
-                    </li>                    
+                    </li> -->                    
                     <li class="nav-item">
                         <a class="nav-link" href="#" data-bs-toggle="modal" data-bs-target="#modalContacto">Contacto</a>
                     </li>
@@ -58,7 +59,7 @@
         <div class="hero-content">
             <h1 id="eventos" class="hero-title"></h1>
             <br><br><br><br><br><br><br><br>
-            <p class="hero-subtitle">Estamos convencidos de que Jeannette Jara representa una alternativa comprometida con la justicia y la paz social, la seguridad, la salud, la participación ciudadana y el bienestar para todas y todos.</p>
+            <p class="hero-subtitle">"Trabajemos juntos por un Chile con justicia social, donde los derechos de las personas estén por sobre los intereses de unos pocos."</p>
             <!-- Botón que activa el modal de actividades -->
             <button class="btn btn-hero btn-lg text-white" data-bs-toggle="modal" data-bs-target="#modalActividades">
                 Próximas actividades
@@ -95,13 +96,14 @@
                             <img src="img/actividades/03_encuentro_ciudadano.jpg" class="img-fluid w-100" alt="" style="height: 600px; padding: 10px; padding-bottom: 60px;">
                         </div> -->
 
-                        <!-- Actividad 4 -->                        
+                        <!-- Actividad 4 -->   
+                        <!--
                         <div class="col-lg-6">
                             <img src="img/actividades/04_encuentro_con_cafe.jpg" class="img-fluid w-100" alt="" style="height: 600px; padding: 10px; padding-bottom: 60px;">
-                        </div>
+                        </div> -->                     
 
                         <!-- Actividad 5 -->                        
-                        <div class="col-lg-6">
+                        <div class="col">
                             <img src="img/actividades/05_encuentro_sabado_6.jpg" class="img-fluid w-100" alt="" style="height: 600px; padding: 10px; padding-bottom: 60px;">
                         </div>
                     </div>
@@ -109,21 +111,6 @@
             </div>
         </div>
     </div>
-
-    <!-- Contenido principal con la card del PDF -->
-    <div id="programa" class="main-content">
-        <div class="container">
-            <div class="row justify-content-center">
-                <div class="card pdf-card">                    
-                    <a href="media/pdf/Lineamientos_programaticos.pdf" target="_blank" rel="noopener noreferrer">
-                        <img src="img/afiches/pdf.png" class="card-img-top" alt="">
-                    </a>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <div id="infografias"></div>
 
     <!-- Carrusel de Infografías - Múltiples imágenes -->
     <div class="infographic-carousel">
@@ -138,9 +125,10 @@
                     <div class="carousel-slide">
                         <img src="img/afiches/trabaja_mejor_01.png" class="carousel-img" alt="">
                     </div>
+                    <!--
                     <div class="carousel-slide">
                         <img src="img/afiches/trabaja_mejor_02.png" class="carousel-img" alt="">
-                    </div>
+                    </div> -->
                     <div class="carousel-slide">
                         <img src="img/afiches/trabaja_mejor_03.png" class="carousel-img" alt="">
                     </div>
@@ -186,6 +174,64 @@
             </div>
         </div>
     </div>
+    
+
+    <!-- Contenido principal con la card del PDF -->
+    <!--
+    <div id="programa" class="main-content">
+        <div class="container">
+            <div class="row justify-content-center">
+                <h2 class="section-title text-center">Descarga el programa</h2>
+                <br><br><br>
+                <div class="card pdf-card">                    
+                    <a href="media/pdf/Lineamientos_programaticos.pdf" target="_blank" rel="noopener noreferrer">
+                        <img src="img/afiches/pdf.png" class="card-img-top" alt="">
+                    </a>
+                </div>
+            </div>
+        </div>
+        
+    </div>-->
+
+    <!-- Contenido principal con la card del PDF y el video -->
+    <div id="programa" class="main-content">
+        <div class="container">                        
+            <div class="row justify-content-center align-items-stretch">                
+                <!-- Primera columna: PDF -->
+                <div class="col-lg-4 col-md-4 col-sm-12 mb-4 centered-column">
+                    <div class="card pdf-card">                    
+                        <a href="media/pdf/Lineamientos_programaticos.pdf" target="_blank" rel="noopener noreferrer">
+                            <img src="img/afiches/pdf.png" class="card-img-top" alt="">
+                        </a>
+                    </div>
+                </div>
+                
+                <!-- Segunda columna: Video -->
+                <div class="col-lg-4 col-md-4 col-sm-12 centered-column">
+                    <div class="video-container">                        
+                        <div class="video-placeholder">
+                            <!-- Reemplaza el src con el video real de la campaña -->
+                            <video controls style="width: 100%; height: 100%;">
+                                <source src="media/videos/video_1.mp4" type="video/mp4">
+                                Tu navegador no soporta el elemento de video.
+                            </video>
+                        </div>                        
+                    </div>
+                </div>
+
+                <!-- Tercera columna: Imagen -->
+                <div class="col-lg-4 col-md-4 col-sm-12 mt-5 mb-4 centered-column">
+                    <div class="card pdf-card">
+                        <a href="media/pdf/Lineamientos_programaticos.pdf" target="_blank" rel="noopener noreferrer">
+                            <img src="img/afiches/con-calle-y-trabajo.jpg" class="card-img-top" alt="">
+                        </a>                        
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!--<div id="infografias"></div>-->
 
     <!-- Copla -->
     <br>
@@ -227,7 +273,7 @@
         </div>
     </div>
 
-    <br><br>
+    
 
     <footer class="custom-footer py-4">
         <br>
