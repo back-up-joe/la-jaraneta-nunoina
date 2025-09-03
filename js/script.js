@@ -105,3 +105,16 @@ window.addEventListener('resize', () => {
     createIndicators();
     updateCarousel();
 });
+
+// Script para prevenir la descarga del video pero permitir controles
+document.addEventListener('DOMContentLoaded', function() {
+    const video = document.querySelector('.video-full');
+            
+    // Deshabilitar el menú contextual
+    video.addEventListener('contextmenu', function(e) {
+        e.preventDefault();
+        alert('Esta función está deshabilitada para proteger el contenido.');
+        return false;
+    });
+})
+        

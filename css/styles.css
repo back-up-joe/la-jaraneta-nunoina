@@ -111,27 +111,29 @@ body {
     min-height: 100vh; /* Opcional: cubre toda la altura visible */
 }
 
-/* Footer con azul #2E446C */
+/* Footer con azul #2E446C
 .custom-footer {
     background-color: #2E446C !important;
     color: white;
     font-family: 'Basic Sans', sans-serif;
-    border-top: 3px solid rgba(255, 255, 255, 0.1); /* Borde más grueso para contraste */
+    border-top: 3px solid rgba(255, 255, 255, 0.1); /* Borde más grueso para contraste
 }
 
 .custom-footer p {
     font-weight: 400;
     font-size: 0.95rem; /* Un poco más grande para legibilidad */
+    /*
     letter-spacing: 0.05em;
-    opacity: 0.9; /* Suaviza el blanco para reducir brillo */
+    opacity: 0.9; /* Suaviza el blanco para reducir brillo
 }
 
 /* Versión móvil */
+/*
 @media (max-width: 768px) {
     .custom-footer {
         padding: 1.5rem 0 !important;
     }
-}
+}*/
 
 /* Estilos para el Hero Section */
 .hero-section {
@@ -283,7 +285,7 @@ body {
     margin: 0;
 }
 
-/* Sección de la copla */
+/* Sección de la copla
 #copla {
     display: flex;
     align-items: center;
@@ -321,6 +323,7 @@ body {
     text-transform: uppercase;
     letter-spacing: 0.05em;
     /* color: #E73F40; */
+    /*
     color: white;
     text-decoration: none;
     transition: color 0.3s ease;
@@ -329,7 +332,7 @@ body {
 .official-link:hover {
     color: #c53232;
     text-decoration: underline;
-}
+}*/
 
 /* Carrusel de infografías - Múltiples imágenes */
 .infographic-carousel {
@@ -439,7 +442,8 @@ body {
     }
 }
 
-/* ESTILOS PARA CENTRAR COLUMNAS (programa y video) */ 
+/* ESTILOS PARA CENTRAR COLUMNAS (programa y video) */
+/* 
 .centered-column {
     display: flex;
     flex-direction: column;
@@ -499,6 +503,7 @@ body {
     overflow: hidden;
     position: relative;
     /*padding-top: 56.25%;*/ /* Relación de aspecto 16:9 */
+    /*
     width: 100%;
     max-width: 280px;
 }
@@ -513,8 +518,260 @@ body {
 }
         
 /* RESPONSIVE */
+/*
 @media (max-width: 767.98px) {
     .video-container {
         margin-top: 30px;
     }
+}*/
+
+/* Estilos para la nueva sección de video */
+.video-full-section {
+    width: 100%;
+    background-color: #000;
+    padding: 60px 40px; /* Más padding lateral */
+    margin: 40px 0;
+}
+        
+.video-container-full {
+    max-width: 1000px;
+    margin: 0 auto;
+    position: relative;
+}
+        
+.video-full {
+    width: 100%;
+    height: auto;
+    aspect-ratio: 16/9;
+    border-radius: 8px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+}
+        
+/* Asegurar que los controles sean completamente visibles */
+.video-full::-webkit-media-controls {
+    display: flex !important;
+    opacity: 1 !important;
+    visibility: visible !important;
+}
+        
+.video-full::-webkit-media-controls-panel {
+    background: rgba(0, 0, 0, 0.7);
+    opacity: 1;
+    visibility: visible;
+}
+        
+.video-full::-webkit-media-controls-play-button {
+    display: flex;
+    opacity: 1;
+    background-color: rgba(255, 255, 255, 0.2);
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+}
+        
+.video-full::-webkit-media-controls-fullscreen-button {
+    display: flex;
+    opacity: 1;
+}
+        
+.video-full::-webkit-media-controls-timeline {
+    display: flex;
+    opacity: 1;
+}
+        
+.video-full::-webkit-media-controls-volume-slider {
+    display: flex;
+    opacity: 1;
+}
+        
+.video-full::-webkit-media-controls-current-time-display,
+.video-full::-webkit-media-controls-time-remaining-display {
+    display: flex;
+    opacity: 1;
+    color: white;
+}
+        
+/* Mejorar la apariencia de los controles en otros navegadores */
+.video-full::-moz-range-track {
+    background-color: rgba(255, 255, 255, 0.5);
+}
+        
+.video-full::-ms-fill-lower {
+    background-color: rgba(255, 255, 255, 0.5);
+}
+        
+/* Responsividad para dispositivos móviles */
+@media (max-width: 992px) {
+    .video-full-section {
+        padding: 50px 30px;
+    }
+}
+        
+@media (max-width: 768px) {
+    .video-full-section {
+        padding: 40px 20px;
+    }
+}
+        
+@media (max-width: 576px) {
+    .video-full-section {
+        padding: 30px 15px;
+    }                        
+}
+
+/* FOOTER CON DOS COLUMNAS - COPLAS A LA IZQUIERDA, INFO A LA DERECHA */
+.custom-footer {
+    background-color: #2E446C;
+    color: white;
+    padding: 40px 0 20px;
+}
+        
+.footer-coplas {
+    padding-right: 30px;
+}
+        
+.footer-info {
+    padding-left: 30px;
+    border-left: 1px solid rgba(255, 255, 255, 0.2);
+}
+        
+.footer-copla-text {
+    font-style: italic;
+    text-align: left;
+    line-height: 1.4;
+    margin-bottom: 15px;
+    font-size: 0.85rem;
+    color: rgba(255, 255, 255, 0.9);
+}
+        
+.footer-title {
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+    font-weight: bold;
+    /* color: #ffcc80; */
+    color:#F9F2B4;
+}
+        
+.official-link {
+    /* color: #ffcc80; */
+    color:#F9F2B4;
+    text-decoration: none;
+}
+        
+.official-link:hover {
+    /* color: #ffb74d; */
+    color:#F9F2B4;
+    text-decoration: underline;
+}
+        
+.footer-bottom {
+    margin-top: 30px;
+    padding-top: 20px;
+    border-top: 1px solid rgba(255, 255, 255, 0.2);
+    text-align: center;
+    font-size: 0.9rem;
+}
+        
+/* Responsividad para el footer */
+@media (max-width: 768px) {
+    .footer-coplas, 
+    .footer-info {
+        padding: 0 15px;
+        border-left: none;
+        text-align: center;
+    }
+            
+    .footer-info {
+        margin-top: 30px;
+        padding-top: 30px;
+        border-top: 1px solid rgba(255, 255, 255, 0.2);
+        border-left: none;
+    }
+            
+    .footer-copla-text {
+        text-align: center;
+    }
+}
+
+/* NUEVA SECCIÓN: DOS COLUMNAS DEBAJO DEL VIDEO */
+.quotes-section {
+    padding: 60px 40px;
+    background-color: #f9f8ed;
+}
+        
+.quote-card {
+    background: white;
+    border-radius: 12px;
+    padding: 25px;
+    margin-bottom: 25px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+    border-left: 4px solid #2E446C;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+        
+.quote-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 25px rgba(0, 0, 0, 0.12);
+}
+        
+.quote-text {
+    font-style: italic;
+    font-size: 1.1rem;
+    line-height: 1.6;
+    color: #333;
+    margin-bottom: 15px;
+}
+        
+.quote-icon {
+    color: #1a237e;
+    font-size: 1.5rem;
+    margin-bottom: 15px;
+}
+        
+.pdf-image-container {
+    text-align: center;
+    padding: 20px;
+}
+        
+.pdf-image {
+    max-width: 75%;
+    height: auto;
+    border-radius: 12px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+        
+.pdf-image:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
+}
+        
+.pdf-download-text {
+    margin-top: 15px;
+    font-weight: 600;
+    color: #2E446C;
+    font-size: 1.1rem;
+}
+        
+/* Responsividad para dispositivos móviles */
+@media (max-width: 992px) {            
+    .quotes-section {
+        padding: 50px 30px;
+        }
+    }
+        
+@media (max-width: 768px) {
+    .quotes-section {
+        padding: 40px 20px;
+    }
+            
+    .quote-text {
+        font-size: 1rem;
+    }
+}
+        
+@media (max-width: 576px) {            
+    .quotes-section {
+        padding: 30px 15px;
+    }                    
 }

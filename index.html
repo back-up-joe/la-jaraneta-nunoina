@@ -8,12 +8,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>La Jaraneta Ñuñoina</title>
     <!-- Favicon estándar -->
-    <link rel="icon" href="assets/icons/favicon.png" type="image/x-icon">
+    <link rel="icon" href="assets/icons/favicon.ico" type="image/x-icon">
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
     <!-- Bootstrap Icons -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
-    <link rel="stylesheet" href="css/styles.css?v=1.0.3">
+    <link rel="stylesheet" href="css/styles.css?v=1.0.4">
 </head>
 <body>
     <!-- Google Tag Manager (noscript) -->
@@ -193,11 +193,73 @@
         
     </div>-->
 
+    <!-- Nueva sección de video a pantalla completa -->
+    <section class="video-full-section">
+        <div class="video-container-full">
+            <video class="video-full" controls controlsList="nodownload" disablePictureInPicture oncontextmenu="return false;">
+                <source src="media/videos/video_1.mp4" type="video/mp4">
+                Tu navegador no soporta el elemento de video.
+            </video>
+        </div>
+    </section>
+
+    <!-- NUEVA SECCIÓN: DOS COLUMNAS DEBAJO DEL VIDEO -->
+    <section class="quotes-section" id="programa">
+        <div class="container">
+            <div class="row">
+                <!-- Columna 1: Imagen con enlace al PDF -->
+                <div class="col-lg-5 col-md-6 mb-5 mb-md-0">
+                    <div class="pdf-image-container">
+                        <a href="media/pdf/Lineamientos_programaticos.pdf" target="_blank" rel="noopener noreferrer">
+                            <img src="img/afiches/programa_portada_pdf2.png" alt="" class="pdf-image">
+                        </a>                        
+                        <p class="pdf-download-text">Pincha la imagen</p>
+                    </div>
+                </div>
+                
+                <!-- Columna 2: Citas -->
+                <div class="col-lg-7 col-md-6">
+                    <div class="quote-card">
+                        <!--
+                        <div class="quote-icon">
+                            <i class="bi bi-chat-quote-fill"></i>
+                        </div> -->
+                        <p class="quote-text">
+                            "Chile nos exige un amplio acuerdo social que nos permita aprovechar las oportunidades que tenemos para desarrollar a nuestro país. <strong>Que el crecimiento se transforme en desarrollo social y humano que llegue a todas las mesas de las familias de Chile.</strong> En esa dirección nos proponemos avanzar los próximos cuatro años."
+                        </p>
+                    </div>
+                    
+                    <div class="quote-card">
+                        <!--
+                        <div class="quote-icon">
+                            <i class="bi bi-chat-quote-fill"></i>
+                        </div> -->
+                        <p class="quote-text">
+                            "Nuestro compromiso es simple, pero inquebrantable: enfrentar la falta de acceso oportuno a la atención de salud. <strong>Trabajar para que las familias no se empobrezcan por enfermarse y que la dignidad y el bienestar de las personas sean siempre la primera prioridad."</strong>
+                        </p>
+                    </div>
+                    
+                    <div class="quote-card">
+                        <!--
+                        <div class="quote-icon">
+                            <i class="bi bi-chat-quote-fill"></i>
+                        </div> -->
+                        <p class="quote-text">
+                            "Para dar respuestas oportunas, trabajaremos con un objetivo claro: <strong>que las personas de esfuerzo tengan la tranquilidad de acceder a una vivienda,</strong> llegar en paz a sus hogares y criar a sus familias en barrios iluminados, limpios, con servicios, áreas de recreación e infraestructura deportiva de calidad."
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
     <!-- Contenido principal con la card del PDF y el video -->
+    <!--
     <div id="programa" class="main-content">
         <div class="container">                        
             <div class="row justify-content-center align-items-stretch">                
-                <!-- Primera columna: PDF -->
+                Primera columna: PDF
                 <div class="col-lg-4 col-md-4 col-sm-12 mb-4 centered-column">
                     <div class="card pdf-card">                    
                         <a href="media/pdf/Lineamientos_programaticos.pdf" target="_blank" rel="noopener noreferrer">
@@ -206,11 +268,10 @@
                     </div>
                 </div>
                 
-                <!-- Segunda columna: Video -->
+                Segunda columna: Video
                 <div class="col-lg-4 col-md-4 col-sm-12 centered-column">
                     <div class="video-container">                        
-                        <div class="video-placeholder">
-                            <!-- Reemplaza el src con el video real de la campaña -->
+                        <div class="video-placeholder">                        
                             <video controls style="width: 100%; height: 100%;">
                                 <source src="media/videos/video_1.mp4" type="video/mp4">
                                 Tu navegador no soporta el elemento de video.
@@ -218,8 +279,7 @@
                         </div>                        
                     </div>
                 </div>
-
-                <!-- Tercera columna: Imagen -->
+                Tercera columna: Imagen
                 <div class="col-lg-4 col-md-4 col-sm-12 mt-5 mb-4 centered-column">
                     <div class="card pdf-card">
                         <a href="media/pdf/Lineamientos_programaticos.pdf" target="_blank" rel="noopener noreferrer">
@@ -230,15 +290,17 @@
             </div>
         </div>
     </div>
+    -->
 
     <!--<div id="infografias"></div>-->
 
     <!-- Copla -->
+    <!--
     <br>
     <div id="copla" class="main-content">
         <div class="container container-copla">
-            <!--
-            <h4 id="h4-copla">"Coplas por Jeannette Jara"</h4> -->
+            
+            <h4 id="h4-copla">"Coplas por Jeannette Jara"</h4>
             <br>
             <p id="p-copla">
                 No es la Beatriz de Dante,<br>
@@ -271,10 +333,10 @@
                 no renunciemos a soñar.<br>
             </p>
         </div>
-    </div>
+    </div> -->
 
     
-
+    <!--
     <footer class="custom-footer py-4">
         <br>
         <div class="container text-center">
@@ -282,21 +344,93 @@
                 © <span id="current-year"></span> La Jaraneta Ñuñoina
             </p>
 
-            <!-- Enlace al sitio oficial -->
+            Enlace al sitio oficial
             <div class="mt-3">
                 <a href="https://www.jeannettejara.cl" target="_blank" class="official-link">
                     <i class="bi bi-link-45deg"></i> Enlace al Sitio Web Oficial
                 </a>
             </div>    
 
-            <!--
+            
             <div class="mt-3">
                 <a href="#" class="text-white mx-2 fs-5"><i class="bi bi-instagram"></i></a>
                 <a href="#" class="text-white mx-2 fs-5"><i class="bi bi-facebook"></i></a>
-            </div> -->
+            </div>
             <br><br>
         </div>
         <br><br><br><br><br>
+    </footer> -->
+
+    <!-- FOOTER CON DOS COLUMNAS: COPLAS E INFORMACIÓN -->
+    <footer class="custom-footer py-4">
+        <div class="container">
+            <div class="row">
+                <!-- Columna izquierda: Coplas -->
+                <div class="col-lg-6 col-md-6 footer-coplas">
+                    <!--
+                    <h4 class="footer-title">Coplas por Jeannette Jara</h4> -->
+                    <p class="footer-copla-text">
+                        No es la Beatriz de Dante,<br>
+                        Ni de un Romeo; Julieta.<br>
+                        Es Jeannette Jara neta<br>
+                        graciosa y de buen talante.
+                    </p>
+                    <p class="footer-copla-text">
+                        Mujer fuerte y valerosa,<br>
+                        encarnas Tú la esperanza,<br>
+                        ante duda temerosa;<br>
+                        la gente siente confianza.<br>                
+                    </p>
+                    <p class="footer-copla-text">
+                        Joven y trabajadora<br>
+                        el futuro llegó ahora.<br>
+                        Obreros y estudiantes<br>
+                        Unidos somos gigantes.<br>
+                    </p>
+                    <p class="footer-copla-text">
+                        Los malos nos meten miedo<br> 
+                        y nos quieren hacer callar<br>
+                        en TV y diarios al pedo:<br>
+                        Igual les vamos a ganar<br>
+                    </p>
+                    <p class="footer-copla-text">
+                        Y termino esta cuarteta<br>
+                        porque es hora de trabajar,<br>
+                        la Democracia es la meta,<br>
+                        no renunciemos a soñar.<br>
+                    </p>
+                </div>
+                
+                <!-- Columna derecha: Información -->
+                <div class="col-lg-6 col-md-6 footer-info">
+                    <h4 class="footer-title">Contacto</h4>
+                    <p>Súmate a los comandos en la comuna:</p>
+                    <div class="d-flex align-items-center justify-content-start my-3">
+                        <i class="bi bi-envelope-fill me-2"></i>
+                        <a href="mailto:lajaranetanunoina@gmail.com" class="text-white">lajaranetanunoina@gmail.com</a>
+                    </div>                    
+                    <div class="d-flex align-items-center justify-content-start my-3">
+                        <i class="bi bi-card-checklist me-2"></i>
+                        <a href="https://forms.gle/R7kUAUo7bRrvQeN97" target="_blank" rel="noopener noreferrer" class="text-white">Completa el formulario</a>
+                    </div>
+                    
+                    <div class="mt-4">
+                        <a href="https://www.jeannettejara.cl" target="_blank" class="official-link">
+                            <i class="bi bi-link-45deg"></i> Enlace al Sitio Web Oficial
+                        </a>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Línea inferior con copyright -->
+            <div class="row footer-bottom">
+                <div class="col-12">
+                    <p class="m-0">
+                        © <span id="current-year"></span> La Jaraneta Ñuñoina
+                    </p>
+                </div>
+            </div>
+        </div>
     </footer>
 
     <!-- Modal de Contacto -->
@@ -333,6 +467,6 @@
 
     <!-- Bootstrap JS -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="js/script.js?v=1.0.3"></script>
+    <script src="js/script.js?v=1.0.4"></script>
 </body>
 </html>
