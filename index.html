@@ -35,11 +35,10 @@
                 <ul class="navbar-nav ms-auto">                    
                     <li class="nav-item">
                         <a class="nav-link" href="#">Inicio</a>
-                    </li>
-                    <!--
+                    </li>                    
                     <li class="nav-item">
                         <a class="nav-link" href="#eventos">Actividades</a>
-                    </li> -->
+                    </li>
                     <li class="nav-item">
                         <a class="nav-link" href="#programa">Programa</a>
                     </li>
@@ -61,11 +60,10 @@
             <h1 id="eventos" class="hero-title"></h1>
             <br><br><br><br><br><br><br><br>
             <p class="hero-subtitle">"Trabajemos juntos por un Chile con justicia social, donde los derechos de las personas estén por sobre los intereses de unos pocos."</p>
-            <!-- Botón que activa el modal de actividades -->
-            <!--
+            <!-- Botón que activa el modal de actividades -->            
             <button class="btn btn-hero btn-lg text-white" data-bs-toggle="modal" data-bs-target="#modalActividades">
                 Próximas actividades
-            </button> -->
+            </button>
         </div>
     </section>
 
@@ -109,17 +107,63 @@
                         <div class="col">
                             <img src="img/actividades/05_encuentro_sabado_6.jpg" class="img-fluid w-100" alt="" style="height: 600px; padding: 10px; padding-bottom: 60px;">
                         </div> -->
+
+                        <!-- Actividad 6 -->                          
+                        <div class="col">
+                            <img src="img/actividades/06_encuentro_sabado_13.jpg" class="img-fluid w-100" alt="" style="height: 600px; padding: 10px; padding-bottom: 60px;">
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
     </div>
 
-    <!-- Carrusel de Infografías - Múltiples imágenes -->
+    <!-- Carrusel de Infografías 2 - Seguridad - Múltiples imágenes -->
     <div class="infographic-carousel">
-        <div class="container">
-            <!--
-            <h2 class="carousel-title"></h2> -->
+        <div class="container">            
+            <div class="carousel-container">
+                <div class="carousel-track" id="carouselTrack">
+                    <div class="carousel-slide">
+                        <img src="img/afiches/00_seguridad_10_medidas.png" class="carousel-img" alt="">
+                    </div>
+                    <div class="carousel-slide">
+                        <img src="img/afiches/01_seguridad_10_medidas.png" class="carousel-img" alt="">
+                    </div>                    
+                    <div class="carousel-slide">
+                        <img src="img/afiches/02_seguridad_10_medidas.png" class="carousel-img" alt="">
+                    </div>
+                    <div class="carousel-slide">
+                        <img src="img/afiches/03_seguridad_10_medidas.png" class="carousel-img" alt="">
+                    </div>
+                    <div class="carousel-slide">
+                        <img src="img/afiches/04_seguridad_10_medidas.png" class="carousel-img" alt="">
+                    </div>
+                    <div class="carousel-slide">
+                        <img src="img/afiches/05_seguridad_10_medidas.png" class="carousel-img" alt="">
+                    </div>
+                    <div class="carousel-slide">
+                        <img src="img/afiches/06_seguridad_10_medidas.png" class="carousel-img" alt="">
+                    </div>                    
+                </div>
+                
+                <div class="carousel-control prev" onclick="moveSlide(-1)">
+                    <i class="bi bi-chevron-left"></i>
+                </div>
+                <div class="carousel-control next" onclick="moveSlide(1)">
+                    <i class="bi bi-chevron-right"></i>
+                </div>
+                
+                <div class="carousel-indicators" id="carouselIndicators">
+                    <!-- Los indicadores se generan con JavaScript -->
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Carrusel de Infografías - Múltiples imágenes -->
+    <!--
+    <div class="infographic-carousel">
+        <div class="container">            
             <div class="carousel-container">
                 <div class="carousel-track" id="carouselTrack">
                     <div class="carousel-slide">
@@ -127,11 +171,7 @@
                     </div>
                     <div class="carousel-slide">
                         <img src="img/afiches/trabaja_mejor_01.png" class="carousel-img" alt="">
-                    </div>
-                    <!--
-                    <div class="carousel-slide">
-                        <img src="img/afiches/trabaja_mejor_02.png" class="carousel-img" alt="">
-                    </div> -->
+                    </div>                    
                     <div class="carousel-slide">
                         <img src="img/afiches/trabaja_mejor_03.png" class="carousel-img" alt="">
                     </div>
@@ -171,12 +211,12 @@
                     <i class="bi bi-chevron-right"></i>
                 </div>
                 
-                <div class="carousel-indicators" id="carouselIndicators">
-                    <!-- Los indicadores se generan con JavaScript -->
+                <div class="carousel-indicators" id="carouselIndicators"> -->
+                    <!-- Los indicadores se generan con JavaScript
                 </div>
             </div>
         </div>
-    </div>
+    </div> -->
     
 
     <!-- Contenido principal con la card del PDF -->
@@ -200,7 +240,9 @@
     <section class="video-full-section">
         <div class="video-container-full">
             <video class="video-full" controls controlsList="nodownload" disablePictureInPicture oncontextmenu="return false;">
-                <source src="media/videos/video_1.mp4" type="video/mp4">
+                <source src="media/videos/video_2.mp4" type="video/mp4">
+                <!--
+                <source src="media/videos/video_1.mp4" type="video/mp4"> -->
                 Tu navegador no soporta el elemento de video.
             </video>
         </div>
