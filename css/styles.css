@@ -775,3 +775,12 @@ body {
         padding: 30px 15px;
     }                    
 }
+
+#apoderados {
+    background-color: #FAE2D3;
+    text-align: center;
+}
+
+#apoderados a {
+    background-color: #2E446C;
+}
