@@ -545,6 +545,10 @@ body {
     aspect-ratio: 16/9;
     border-radius: 8px;
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+    /* Añadimos filtros para mejorar la apariencia por defecto */
+    filter: brightness(5.1) contrast(1.1);
+    /* Forzar aceleración por hardware */
+    transform: translateZ(0);
 }
         
 /* Asegurar que los controles sean completamente visibles */
