@@ -13,7 +13,7 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
     <!-- Bootstrap Icons -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
-    <link rel="stylesheet" href="css/styles.css?v=1.0.7">
+    <link rel="stylesheet" href="css/styles.css?v=1.0.8">
 </head>
 <body>
     <!-- Google Tag Manager (noscript) -->
@@ -170,7 +170,7 @@
                 </div>
             </div>
         </div>
-    </div> 
+    </div>  -->
 
     <section id="apoderados">
         <div>
@@ -180,7 +180,7 @@
             </a>
             <br><br>
         </div>
-    </section> -->
+    </section>
 
     <!-- Carrusel de Infografías 2 - Seguridad - Múltiples imágenes -->
     <div class="infographic-carousel">
@@ -236,7 +236,7 @@
     <section class="video-full-section">
         <div class="video-container-full">
             <video class="video-full" controls controlsList="nodownload" disablePictureInPicture oncontextmenu="return false;">
-                <source src="media/videos/video_5_pc_nunoa_25-09-2025.mp4" type="video/mp4">
+                <source src="media/videos/video_7_mega_13-10-2025.mp4" type="video/mp4">
                 <!--
                 <source src="media/videos/video_1.mp4" type="video/mp4"> -->
                 Tu navegador no soporta el elemento de video.
@@ -251,8 +251,8 @@
                 <!-- Columna 1: Imagen con enlace al PDF -->
                 <div class="col-lg-5 col-md-6 mb-5 mb-md-0">
                     <div class="pdf-image-container">
-                        <a href="media/pdf/Lineamientos_programaticos.pdf" target="_blank" rel="noopener noreferrer" style="text-decoration: none;">
-                            <img src="img/afiches/programa_portada_pdf2.png" alt="" class="pdf-image">
+                        <a href="media/pdf/Programa_Un_Chile_que_cumple.pdf" target="_blank" rel="noopener noreferrer" style="text-decoration: none;">
+                            <img src="media/pdf/portada-programa.png" alt="" class="pdf-image">
                             <p class="pdf-download-text">Descarga el programa</p>
                         </a>                        
                         
@@ -352,11 +352,25 @@
                             <i class="bi bi-link-45deg"></i> Link al Sitio Web Oficial de Jeannette Jara
                         </a>                        
                     </div>
-                    <div class="mt-2 mb-4">
+                    <div class="mt-2">
                         <a href="https://www.lajaraneta.com" target="_blank" class="official-link">
                             <i class="bi bi-link-45deg"></i> Link a Sitio Web Oficial La Jaraneta
                         </a>                        
                     </div>
+                    <!-- Link a CUCH norponiente -->
+                    <div class="mt-2">
+                        <a href="https://www.instagram.com/cuch_nunoanorponiente?utm_source=ig_web_button_share_sheet&igsh=NWQwdDd2MXNnYW8w" target="_blank" class="official-link">
+                            <i class="bi bi-link-45deg"></i> Link a CUCH Norponiente de Ñuñoa
+                        </a>                        
+                    </div>
+
+                    <!-- Soundtrack de Jeannette Jara -->
+                    <div class="mt-2 mb-4">
+                        <a href="https://drive.google.com/drive/folders/1Gvmxdq9jlcgLyvfqUNI59ScfhXI9MZhy" target="_blank" class="official-link">
+                            <i class="bi bi-link-45deg"></i> Link a Soundtrack de Jeannette Jara
+                        </a>                        
+                    </div>
+
                     <p>Inscríbete como apoderado de mesa:</p>
                     <div class="d-flex align-items-center justify-content-start my-3">
                         <i class="bi bi-card-checklist me-2"></i>
@@ -410,6 +424,147 @@
 
     <!-- Bootstrap JS -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="js/script.js?v=1.0.7"></script>
+    <script src="js/script.js?v=1.0.8"></script>
+
+    <!-- JavaScript corregido para el carrusel -->
+    <script>
+        // Año automático
+        document.getElementById('current-year').textContent = new Date().getFullYear();
+
+        // Carrusel personalizado - CÓDIGO CORREGIDO
+        let currentIndex = 0;
+        let track, slides, indicatorsContainer;
+        let isCarouselInitialized = false;
+        let resizeTimeout;
+
+        // Calcular el número de slides visibles según el ancho de la pantalla
+        function getVisibleSlides() {
+            if (window.innerWidth < 768) return 1;
+            if (window.innerWidth < 992) return 2;
+            return 3;
+        }
+
+        // Crear indicadores
+        function createIndicators() {
+            if (!indicatorsContainer) return;
+            
+            indicatorsContainer.innerHTML = '';
+            const totalSlides = slides.length;
+            const visibleSlides = getVisibleSlides();
+            const indicatorCount = Math.ceil(totalSlides / visibleSlides);
+                    
+            for (let i = 0; i < indicatorCount; i++) {
+                const indicator = document.createElement('div');
+                indicator.classList.add('carousel-indicator');
+                if (i === 0) indicator.classList.add('active');
+                indicator.addEventListener('click', () => {
+                    currentIndex = i * visibleSlides;
+                    updateCarousel();
+                });
+                indicatorsContainer.appendChild(indicator);
+            }
+        }
+
+        // Actualizar carrusel
+        function updateCarousel() {
+            if (!track || !slides.length) return;
+            
+            const slideWidth = slides[0].offsetWidth;
+            const visibleSlides = getVisibleSlides();
+            const maxIndex = Math.max(0, slides.length - visibleSlides);
+            
+            // Asegurarse de que el índice esté dentro de los límites
+            if (currentIndex > maxIndex) {
+                currentIndex = maxIndex;
+            }
+            if (currentIndex < 0) {
+                currentIndex = 0;
+            }
+            
+            track.style.transform = `translateX(-${currentIndex * slideWidth}px)`;
+                    
+            // Actualizar indicadores
+            const indicators = document.querySelectorAll('.carousel-indicator');
+            const activeIndicator = Math.floor(currentIndex / visibleSlides);
+            indicators.forEach((indicator, index) => {
+                indicator.classList.toggle('active', index === activeIndicator);
+            });
+        }
+
+        // Mover slides
+        function moveSlide(direction) {
+            if (!isCarouselInitialized) return;
+            
+            const visibleSlides = getVisibleSlides();
+            const maxIndex = Math.max(0, slides.length - visibleSlides);
+                    
+            currentIndex += direction * visibleSlides;
+                    
+            // Asegurarse de que el índice esté dentro de los límites
+            if (currentIndex < 0) {
+                currentIndex = 0;
+            } else if (currentIndex > maxIndex) {
+                currentIndex = maxIndex;
+            }
+                    
+            updateCarousel();
+        }
+
+        // Inicializar carrusel
+        function initCarousel() {
+            track = document.getElementById('carouselTrack');
+            slides = document.querySelectorAll('.carousel-slide');
+            indicatorsContainer = document.getElementById('carouselIndicators');
+            
+            if (!track || !slides.length || !indicatorsContainer) {
+                console.warn('Elementos del carrusel no encontrados');
+                return false;
+            }
+            
+            createIndicators();
+            updateCarousel();
+            isCarouselInitialized = true;
+            
+            return true;
+        }
+
+        // Script para prevenir la descarga del video pero permitir controles
+        document.addEventListener('DOMContentLoaded', function() {
+            const video = document.querySelector('.video-full');
+            if (video) {
+                // Deshabilitar el menú contextual
+                video.addEventListener('contextmenu', function(e) {
+                    e.preventDefault();
+                    alert('Esta función está deshabilitada para proteger el contenido.');
+                    return false;
+                });
+            }
+            
+            // Inicializar carrusel cuando el DOM esté listo
+            setTimeout(() => {
+                initCarousel();
+            }, 100);
+        });
+
+        // Re-inicializar carrusel en resize con debounce
+        window.addEventListener('resize', () => {
+            clearTimeout(resizeTimeout);
+            resizeTimeout = setTimeout(() => {
+                if (isCarouselInitialized) {
+                    createIndicators();
+                    updateCarousel();
+                }
+            }, 250);
+        });
+
+        // Re-inicializar carrusel cuando las imágenes se carguen
+        window.addEventListener('load', () => {
+            if (!isCarouselInitialized) {
+                initCarousel();
+            }
+        });
+    </script>
+
+    
 </body>
 </html>
